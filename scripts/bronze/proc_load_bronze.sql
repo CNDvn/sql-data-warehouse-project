@@ -44,7 +44,7 @@ begin
 	    cst_key,
 	    cst_firstname,
 	    cst_lastname,
-	    cst_material_status,
+	    cst_marital_status,
 	    cst_gndr,
 	    cst_create_date
 	)
@@ -147,10 +147,10 @@ begin
 	
 	start_time := NOW();
 	raise notice '>> TruncatingTable: bronze.px_cat_g1v2';
-	truncate bronze.px_cat_g1v2;
+	truncate bronze.erp_px_cat_g1v2;
 	
 	raise notice '>> Inserting Data Into: bronze.px_cat_g1v2';
-	COPY bronze.px_cat_g1v2(
+	COPY bronze.erp_px_cat_g1v2(
 	    id,
 	    cat,
 	    subcat,
